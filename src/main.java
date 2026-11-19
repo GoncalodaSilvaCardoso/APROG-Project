@@ -1,4 +1,6 @@
+import java.util.Scanner;
+
 public class main {
-    //a
-    //Olá gonçalinho
+    static Scanner scanner = new Scanner(System.in);
+
 }
