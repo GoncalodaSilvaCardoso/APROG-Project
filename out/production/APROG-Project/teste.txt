@@ -1,0 +1,7 @@
+Ana,Barros,Carla,Daniel,Elsa
+Instagram,TikTok,YouTube,Facebook
+45 80 30 10
+215 215 200 0
+60 40 245 35
+0 120 0 35
+85 20 45 15
