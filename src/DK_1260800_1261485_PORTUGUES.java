@@ -165,7 +165,7 @@ public class DK_1260800_1261485_PORTUGUES {
 
         for (int s = 0; s < redesSociais.length; s++) {
 
-            int maximo = maximoColuna(minutos, s);
+            int maximo = obtermaximoColuna(minutos, s);
             System.out.printf("%-" + LARGURA_NOME + "s: ", redesSociais[s]);
 
             for (int n = 0; n < nomes.length; n++) {
@@ -202,7 +202,7 @@ public class DK_1260800_1261485_PORTUGUES {
         System.out.println("f) Most used social network");
 
         for (int n = 0; n < nomes.length; n++) {
-            int maximo = maximoLinha(minutos, n);
+            int maximo = obterMaximoLinha(minutos, n);
 
             System.out.printf("%-" + LARGURA_NOME + "s: ", nomes[n]);
 
@@ -354,7 +354,7 @@ public class DK_1260800_1261485_PORTUGUES {
     }
 
     // Used in: f), j)
-    public static int maximoLinha(int[][] minutos, int linha) {
+    public static int obterMaximoLinha(int[][] minutos, int linha) {
         int maximo = minutos[linha][0];
 
         for (int s = 1; s < minutos[linha].length; s++) {
@@ -366,7 +366,7 @@ public class DK_1260800_1261485_PORTUGUES {
     }
 
     // Functions for d)
-    public static int maximoColuna(int[][] minutos, int coluna) {
+    public static int obtermaximoColuna(int[][] minutos, int coluna) {
         int maximo = minutos[0][coluna];
 
         for (int n = 1; n < minutos.length; n++) {
@@ -494,7 +494,7 @@ public class DK_1260800_1261485_PORTUGUES {
     }
 
     // Functions for j)
-    public static int minimoLinha(int[][] minutos, int linha) {
+    public static int obterminimoLinha(int[][] minutos, int linha) {
         int minimo = minutos[linha][0];
 
         for (int s = 1; s < minutos[linha].length; s++) {
@@ -506,7 +506,7 @@ public class DK_1260800_1261485_PORTUGUES {
     }
 
     public static int obterDiferenca(int[][] minutos, int linha) {
-        return maximoLinha(minutos, linha) - minimoLinha(minutos, linha);
+        return obterMaximoLinha(minutos, linha) - obterminimoLinha(minutos, linha);
     }
 
     public static int obterMenorDiferenca(int[][] minutos) {
