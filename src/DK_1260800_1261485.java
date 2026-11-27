@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class DK_1260800_1261485_PORTUGUES {
+public class DK_1260800_1261485 {
 
     static final char SEPARADOR_NOMES = ',';
     static final int SEM_ARGUMENTOS = 0;
