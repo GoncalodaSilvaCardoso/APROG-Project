@@ -1,4 +1,7 @@
 # TRABALHO_PRÁTICO_M2
+![Java](https://img.shields.io/badge/Java-JDK%208-007396?style=flat-square&logo=openjdk&logoColor=white)
+![Instituição](https://img.shields.io/badge/ISEP-LEI%20%7C%20APROG-8A1538?style=flat-square)
+![Ano Letivo](https://img.shields.io/badge/Ano%20Letivo-2026%2F2027-333333?style=flat-square)
 
 > **Algoritmia e Programação (APROG)** · Licenciatura em Engenharia Informática  
 > Instituto Superior de Engenharia do Porto (ISEP) · Ano Letivo 2026/2027
