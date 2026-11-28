@@ -1,44 +1,58 @@
-#APROG-Project
-# 📊 Análise de Hábitos de Utilização de Redes Sociais
+# Análise de Hábitos de Utilização de Redes Sociais
 
-> **Trabalho Prático de Algoritmia e Programação (APROG) — 2026/2027**  
-> Licenciatura em Engenharia Informática (LEI) — Instituto Superior de Engenharia do Porto (ISEP)
+![Java](https://img.shields.io/badge/Java-JDK%208-007396?style=flat-square&logo=openjdk&logoColor=white)
+![Instituição](https://img.shields.io/badge/ISEP-LEI%20%7C%20APROG-8A1538?style=flat-square)
+![Ano Letivo](https://img.shields.io/badge/Ano%20Letivo-2026%2F2027-333333?style=flat-square)
 
----
-
-## 📋 Sobre o Projeto
-
-Este projeto consiste numa aplicação desenvolvida em **Java** que analisa o tempo de utilização diário (em minutos) que um conjunto de pessoas dedica a diferentes redes sociais. 
-
-A partir de um conjunto de dados estruturado (via teclado ou ficheiro de texto), o programa processa uma matriz de utilização e gera métricas estatísticas, classificações de perfil, rankings e representações gráficas em consola, permitindo caracterizar padrões individuais e comportamentos globais do grupo.
+**Unidade Curricular:** Algoritmia e Programação (APROG)  
+**Curso:** Licenciatura em Engenharia Informática (LEI)  
+**Instituição:** Instituto Superior de Engenharia do Porto (ISEP)  
 
 ---
 
-## 🚀 Funcionalidades Implementadas
+## Sumário
 
-A aplicação executa sequencialmente as seguintes operações de análise:
-
-- **a) Leitura e Armazenamento:** Carregamento dos nomes das pessoas, redes sociais e matriz de tempos diários em memória (utilizando arrays e matrizes, sem variáveis globais).
-- **b) Tabela de Utilização:** Visualização formatada dos tempos diários (minutos/dia) por pessoa e por rede social.
-- **c) Totais e Médias Individuais:** Cálculo do tempo total diário e da média de minutos por rede social para cada utilizador.
-- **d) Utilizador Mais Ativo por Rede:** Identificação da(s) pessoa(s) com maior tempo de utilização em cada plataforma.
-- **e) Utilizadores Acima da Média:** Listagem das pessoas cujo tempo de utilização supera a média em **todas** as redes sociais simultaneamente (ou `none`, caso não se verifique).
-- **f) Rede Social Favorita:** Identificação da(s) rede(s) social(is) mais utilizada(s) por cada pessoa.
-- **g) Distribuição Percentual:** Cálculo da percentagem de tempo que cada pessoa dedica às redes sociais que efetivamente utiliza.
-- **h) Perfis de Utilizador:** Classificação visual dos utilizadores em quatro categorias com base no tempo total diário:
-  - `Moderate`: $< 90$ minutos
-  - `Regular`: $[90, 180]$ minutos
-  - `Intensive`: $]180, 300]$ minutos
-  - `Very Intensive`: $> 300$ minutos
-- **i) Histograma de Redes Sociais:** Ordenação decrescente das plataformas (por tempo total, número de utilizadores e ordem alfabética) acompanhada de um histograma horizontal percentual (escala $1/5$, intervalos de $25\%$).
-- **j) Utilizadores Mais Equilibrados:** Identificação da(s) pessoa(s) com menor diferença entre o tempo máximo e mínimo gasto nas suas redes sociais.
+1. [Enquadramento](#1-enquadramento)
+2. [Especificação Funcional](#2-especificação-funcional)
+3. [Arquitetura e Estrutura do Repositório](#3-arquitetura-e-estrutura-do-repositório)
+4. [Formato de Entrada de Dados](#4-formato-de-entrada-de-dados)
+5. [Compilação e Execução](#5-compilação-e-execução)
+6. [Equipa e Distribuição de Trabalho](#6-equipa-e-distribuição-de-trabalho)
 
 ---
 
-## 🗂️ Estrutura do Repositório
+## 1. Enquadramento
+
+O presente projeto consiste no desenvolvimento de uma aplicação de consola em **Java** destinada à análise estatística e comportamental do tempo diário dedicado a diferentes plataformas de redes sociais por um conjunto de utilizadores.
+
+A partir da leitura de registos estruturados (em minutos por dia), o sistema armazena a informação numa matriz bidimensional e processa um conjunto sequencial de métricas individuais e globais, permitindo identificar padrões de consumo, perfis de intensidade e desequilíbrios de utilização.
+
+---
+
+## 2. Especificação Funcional
+
+O programa executa de forma sequencial as dez alíneas definidas no caderno de encargos:
+
+| Alínea | Módulo Funcional | Descrição Técnica |
+| :---: | :--- | :--- |
+| **a)** | **Leitura e Armazenamento** | Carregamento dos identificadores de pessoas ($P$), redes sociais ($R$) e matriz de tempos ($P \times R$) em memória, recorrendo exclusivamente a *arrays* e variáveis locais. |
+| **b)** | **Matriz de Utilização** | Apresentação tabular formatada dos minutos diários registados por utilizador e por plataforma. |
+| **c)** | **Métricas Individuais** | Cálculo do tempo total diário e da média aritmética de utilização por rede social para cada pessoa. |
+| **d)** | **Líderes por Plataforma** | Determinação do(s) utilizador(es) com maior tempo de permanência em cada rede social. |
+| **e)** | **Utilização Acima da Média** | Identificação dos utilizadores que superam a média global em **todas** as redes sociais simultaneamente (apresentando `none` na ausência de ocorrências). |
+| **f)** | **Preferência Individual** | Extração da(s) rede(s) social(is) com maior volume de utilização para cada pessoa. |
+| **g)** | **Distribuição Relativa** | Cálculo percentual do tempo alocado por cada utilizador às redes sociais efetivamente utilizadas ($> 0$ min). |
+| **h)** | **Classificação de Perfis** | Mapeamento gráfico dos utilizadores em quatro escalões de intensidade: `Moderate` ($< 90$), `Regular` ($[90, 180]$), `Intensive` ($]180, 300]$) e `Very Intensive` ($> 300$). |
+| **i)** | **Histograma de Plataformas** | Ordenação decrescente das redes sociais (critérios: tempo total, número de utilizadores e ordem alfabética) com representação gráfica percentual (escala $1/5$, intervalos de $25\%$). |
+| **j)** | **Equilíbrio de Utilização** | Identificação do(s) utilizador(es) com menor amplitude entre a rede social mais utilizada e a menos utilizada. |
+
+---
+
+## 3. Arquitetura e Estrutura do Repositório
 
 ```text
+APROG-Project/
 ├── src/
-│   └── DK_1260800_1261485.java   # Código-fonte principal da aplicação
-├── teste.txt                     # Ficheiro de exemplo com dados de entrada
-└── README.md                     # Documentação do projeto
+│   └── DK_1260800_1261485.java    # Código-fonte monolítico modularizado (submissão oficial)
+├── teste.txt                      # Conjunto de dados padrão para validação funcional
+└── README.md                      # Documentação técnica do projeto
